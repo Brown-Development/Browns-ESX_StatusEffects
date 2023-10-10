@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+        <script>
+            var audioPlayer = null;
+            function stopAudio() {
+                if (audioPlayer != null) {
+                    audioPlayer.stop();
+                }
+            }
+            window.addEventListener('message', function(event) {
+                if (event.data.play == "playHeartbeat") {
+                    stopAudio();
+                    audioPlayer = new Howl({
+                        src: ["./audio/heartbeat.ogg"],
+                        loop: true,
+                    });
+                    audioPlayer.volume(1);
+                    audioPlayer.play();
+                } else if (event.data.stop == "stopHeartbeat") {
+                    stopAudio();
+                }
+            });
+        </script>
+    </head>
+</html>
