@@ -1,4 +1,7 @@
-# Browns ESX Status Effects (Originally Made for True Story RP V4)
+# Browns ESX Status Effects 
+(Originally Made for True Story RP V4)
+
+# Check Out My Tebex for more dope scripts for a GOOD price: https://brown-development.tebex.io/
 
 Personal Discord: bwobrown
 Discord Server: https://discord.gg/AKpjuAMmSm
