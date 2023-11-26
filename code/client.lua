@@ -21,8 +21,10 @@ AddEventHandler('browns:updateStatus', function(data)
     else
         drawEffects = false 
     end
+    DoEffect()
 end)
-Citizen.CreateThread(function()
+
+function DoEffect()
     while true do 
         Citizen.Wait(1000)
         if drawEffects then 
@@ -34,6 +36,7 @@ Citizen.CreateThread(function()
             SendNUIMessage({
                 stop = 'stopHeartbeat',
             })
+            break
         end
     end
-end)
+end
